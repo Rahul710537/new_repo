@@ -1,97 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Webpage</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul Portfolio</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f0f0f0;
+            background: #f5f7fa;
         }
-
         header {
             background: linear-gradient(135deg, #4a90e2, #7b42f6);
             color: white;
-            padding: 40px;
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            padding: 60px 20px;
         }
-
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+        header p {
+            font-size: 18px;
+        }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 12px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            animation: slideUp 1.2s ease;
         }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #4a90e2;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill-box {
+            background: #e8f0fe;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
             transition: 0.3s;
-            cursor: pointer;
         }
-
-        .btn:hover {
-            background: #7b42f6;
+        .skill-box:hover {
+            background: #d1ddff;
             transform: scale(1.05);
         }
-
-        .box {
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 8px;
-            background: #e8f0fe;
-            display: none;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        footer {
+            background: #4a90e2;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Dynamic Webpage</h1>
-    <p>Using Only HTML + CSS (No JavaScript!)</p>
+    <h1>Rahul</h1>
+    <p>Full Stack Developer | Python Developer | App Developer | UI/UX(Figma)</p>
 </header>
 
 <div class="container">
-    <h2>Click the Button Below</h2>
+    <h2>About Me</h2>
+    <p>
+        Hello! I'm Rahul, a passionate developer skilled in web, app, and UI/UX design. I enjoy
+        building modern, clean, and user-friendly applications using both frontend & backend
+        technologies.
+    </p>
 
-    <label for="toggle" class="btn">Click to Show/Hide Content</label>
-    <input type="checkbox" id="toggle" hidden>
-
-    <div class="box">
-        <h3>Dynamic Content</h3>
-        <p>This section appears and disappears using only HTML & CSS! No JavaScript is used.</p>
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">MERN Stack</div>
+        <div class="skill-box">Figma (UI/UX)</div>
+        <div class="skill-box">App Development</div>
     </div>
 </div>
 
-<style>
-    /* CSS checkbox trick */
-    #toggle:checked + .box {
-        display: block;
-    }
-</style>
+<footer>
+    © 2025 Rahul | Portfolio
+</footer>
 
 </body>
 </html>
